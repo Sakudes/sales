@@ -4,7 +4,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class Button extends StatelessWidget {
-  const Button({Key? key}) : super(key: key);
+  final String buttonText;
+  const Button({Key? key, required this.buttonText}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,10 @@ class Button extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: ElevatedButton(
         onPressed: () {},
-        child: const Text('Submit'),
+        child: Text(
+          buttonText,
+          style: TextStyle(),
+        ),
       ),
     );
   }
