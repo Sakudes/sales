@@ -15,17 +15,31 @@ class _ChoicePageState extends State<ChoicePage> {
     return Scaffold(
         appBar: AppBar(),
         body: Container(
-          padding:
-              const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 40),
-          child: const TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.black),
-              ),
-              hintText: 'Enter a search term',
-            ),
-          ),
-        ));
+            padding:
+                const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 40),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/reg');
+                    },
+                    child: Text('Владелец'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/reg');
+                    },
+                    child: Text('Продавец'),
+                  ),
+                ),
+              ],
+            )));
   }
 }
