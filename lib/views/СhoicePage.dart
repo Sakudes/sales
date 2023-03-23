@@ -20,6 +20,7 @@ class _ChoicePageState extends State<ChoicePage> {
             padding:
                 const EdgeInsets.only(left: 20, right: 20, top: 40, bottom: 40),
             child: Column(
+
               children: [
                 SvgPicture.asset(
                   'images/men_on_oclok.svg',
@@ -27,6 +28,7 @@ class _ChoicePageState extends State<ChoicePage> {
                 Button(
                   buttonName: 'Продолжить',
                   fullWidht: true,
+
                 ),
               ],
             )));
