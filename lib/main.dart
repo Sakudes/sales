@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'views/CompanyCreateStep.dart';
 import 'views/Register.dart';
+import 'views/SingIn.dart';
+import 'views/Test.dart';
 import 'views/СhoicePage.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -17,17 +19,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(
-          textTheme: GoogleFonts.robotoTextTheme(
-            Theme.of(context).textTheme,
-          ),
-        ),
-        debugShowCheckedModeBanner: false,
-        title: '',
-        routes: {
-          '/': (context) => const ChoicePage(),
-          '/com': (context) => const CompanyCreateStep(),
-          '/reg': (context) => const Register()
-        });
+
+
+      title: '',
+      routes: {
+        '/': (context) => const SingIn(),
+        '/choise': (context) => const ChoicePage(),
+        '/com': (context) => const CompanyCreateStep(),
+        '/reg': (context) => const Register(),
+        '/test': (context) => const Test()
+      },
+    );
+
   }
 }

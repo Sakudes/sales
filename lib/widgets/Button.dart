@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Button extends StatelessWidget {
+
   final String buttonName;
   final bool fullWidht;
 
@@ -35,6 +36,7 @@ class Button extends StatelessWidget {
               ),
             ),
           ),
+
         ),
       ),
     );

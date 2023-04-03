@@ -6,16 +6,17 @@ import 'package:http/http.dart' as http;
 class Registration {
   void reg(firstname, lastName, phone, password) async {
     final response = await http.post(
-        Uri.parse('http://192.168.56.1:45432/api/v1/auth/register'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          "firstname": firstname,
-          "lastname": lastName,
-          "phone": phone,
-          "role": 1,
-          "company": {"id": 1},
-          "password": password
-        }));
+      Uri.parse('http://192.168.56.1:45432/api/v1/auth/register'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        "firstname": firstname,
+        "lastname": lastName,
+        "phone": phone,
+        "role": 1,
+        "company": {"id": 1},
+        "password": password
+      }),
+    );
 
     var authToken = await response.body;
     if (authToken != null) {
